@@ -1,0 +1,51 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>{{ item.name }}
+			<figure class="creator">
+				<img src="{{ creator.picture}}">
+				<figcaption>{{ creator.name }}</figcaption>
+			</figure>
+			</h1>
+
+		</div>
+	</div>
+
+		{% if item !=[] %}	
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<h3>CAR TYPE</h3>
+                <div class="menu-item">							
+                    <p>{{item.item_type}}</p>																
+                </div>
+			</div>
+			<div class="col-md-4">			
+				<h3>DESCRIPTION</h3>	
+                <div class="menu-item">
+                    <p>{{item.description}}</p>														
+                </div>
+			</div>
+			<div class="col-md-3">
+				<h3>PRICE</h3>	
+                <div class="menu-item">
+                    <p class="menu-price">{{item.price}}</p>							
+                </div>				
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div>
+				<a href = "{{url_for('carMenuItem', car_id = item.car_id)}}">
+						<button class="btn btn-default cancel" type="button">
+						<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>Back</button>
+					</a>
+		</div>
+	
+
+	{% endif %}
+{% endblock %}

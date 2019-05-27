@@ -1,0 +1,126 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>{{ car.name }}
+			<figure class="creator">
+				<img src="{{ url_for('static', filename='c1.png') }}">
+				<figcaption>{{ creator.name }}</figcaption>
+			</figure>
+			</h1>
+
+		</div>
+	</div>
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+			<a href="{{url_for('editCarMenu', car_id = car.id )}}">
+				<button class="btn btn-default" id="new-menu-item">
+					<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Car Company
+				</button>
+			</a>
+			<a href="{{url_for('newCarMenuItem', car_id = car.id )}}">
+				<button class="btn btn-default" id="new-menu-item">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Car
+				</button>
+			</a>
+						<a href="{{url_for('deleteCarMenu', car_id = car.id )}}">
+				<button class="btn btn-default delete" id="delete-company">
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete Car Company
+				</button>
+			</a>
+		</div>
+		<div class="col-md-7"></div>
+	</div>
+	
+	{% if items !=[] %}	
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+					{% for i in items %}
+						{% if i.item_type == 'PASSENGER' %}
+						<a href = "{{url_for('carMenuItemOne', car_id = car.id, menu_id = i.id)}}">
+								<h2>{{i.name}}</h2></a>
+					
+							<div class="menu-item">
+								<p>{{i.description}}</p>
+								<p class="menu-price">{{i.price}}</p>
+								<a href="{{url_for('editCarMenuItem', car_id = car.id, menu_id=i.id)}}">Edit</a> | 
+								<a href="{{url_for('deleteCarMenuItem', car_id = car.id, menu_id=i.id)}}">Delete</a>
+							</div>
+					
+					
+						{% endif %}
+					{% endfor %}
+			</div>
+			<div class="col-md-4">			
+				<h2></h2>
+					{% for i in items %}
+						{% if i.item_type == 'SUVS' %}
+						<a href = "{{url_for('carMenuItemOne', car_id = car.id, menu_id = i.id)}}">
+								<h2>{{i.name}}</h2></a>
+					
+						<div class="menu-item">							
+							<p>{{i.description}}</p>
+							<p class="menu-price">{{i.price}}</p>
+							<a href="{{url_for('editCarMenuItem', car_id = car.id, menu_id=i.id)}}">Edit</a> | 
+							<a href="{{url_for('deleteCarMenuItem', car_id = car.id, menu_id=i.id)}}">Delete</a>
+						</div>
+								
+						{% endif %}
+					{% endfor %}
+			</div>
+			<div class="col-md-3">
+				<h2></h2>
+					{% for i in items %}
+						{% if i.item_type == 'COMMERCIAL' %}
+						<a href = "{{url_for('carMenuItemOne', car_id = car.id, menu_id = i.id)}}">
+								<h2>{{i.name}}</h2></a>
+					
+						<div class="menu-item">							
+							<p>{{i.description}}</p>
+							<p class="menu-price">{{i.price}}</p>
+							<a href="{{url_for('editCarMenuItem', car_id = car.id, menu_id=i.id)}}">Edit</a> | 
+							<a href="{{url_for('deleteCarMenuItem', car_id = car.id, menu_id=i.id)}}">Delete</a>
+						</div>
+						
+						{% endif %}
+					{% endfor %}
+				<h2></h2>
+					{% for i in items %}
+						{% if i.item_type == 'SPORT' %}
+						<a href = "{{url_for('carMenuItemOne', car_id = car.id, menu_id = i.id)}}">
+								<h2>{{i.name}}</h2></a>
+					
+						<div class="menu-item">							
+							<p>{{i.description}}</p>
+							<p class="menu-price">{{i.price}}</p>
+							<a href="{{url_for('editCarMenuItem', car_id = car.id, menu_id=i.id)}}">Edit</a> | 
+							<a href="{{url_for('deleteCarMenuItem', car_id = car.id, menu_id=i.id)}}">Delete</a>
+						</div>
+							
+						{% endif %}
+					{% endfor %}
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	{% endif %}
+{% endblock %}
