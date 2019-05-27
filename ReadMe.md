@@ -25,12 +25,12 @@ Downloading [VartualBox](www.vartualbox.org/wiki/Downloads) and from the website
 [VartualBox](www.vartualbox.org/wiki/Downloads) software will be installed to the OS firstly. Next, the installation of [vagrant](www.vagrantup.com) will take place. After the installation of these two software the work will be on command line to run the virtual machine and configure its all settings.  
 
 ### Runing the virtual machine
-- vagrant up
-- vagrant ssh
-- cd  /vagrant/catalog 
-- python database_setup.py
-- python lotofmenu.py
-- python application.py
+- $ vagrant up
+- $ vagrant ssh
+- $ cd  /vagrant/catalog 
+- $ python database_setup.py
+- $ python lotofmenu.py
+- $ python application.py
 - Then Accessing and testing the application by visiting http://localhost:8000 locally
 
 ### Project Structure: 
@@ -58,7 +58,8 @@ Downloading [VartualBox](www.vartualbox.org/wiki/Downloads) and from the website
     +-- newcaritem.html
     +-- publiccar.html
     +-- publiccaritem.html
-	'''
+	
+'''
 
 
 
