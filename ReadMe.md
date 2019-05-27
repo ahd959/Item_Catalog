@@ -12,8 +12,7 @@ This project is the second project for those who enrolled in Full-Stack Web Deve
 - [Git](https://www.git-scm.com/) a free and open source Unix-style terminal. 
 
 ### How to get to the project: 
-Downloading [VartualBox](https://www.virtualbox.org/) and [vagrant](https://www.vagrantup.com/) from their websites and set all the requirements for running the virtual machine. 
-Installing [Git](https://www.git-scm.com/) to operate the virtual machine environment. Clone or download the [Vagrant VM configuration file](https://github.com/udacity/fullstack-nanodegree-vm).
+Downloading [VartualBox](https://www.virtualbox.org/) and [vagrant](https://www.vagrantup.com/) from their websites and set all the requirements for running the virtual machine. Then, installing [Git](https://www.git-scm.com/) to operate the virtual machine environment. Finally, clone or download the [Vagrant VM configuration file](https://github.com/udacity/fullstack-nanodegree-vm).
 
 ### Runing the virtual machine
 - $ vagrant up
