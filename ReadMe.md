@@ -8,7 +8,7 @@ This project is the second project for those who enrolled in Full-Stack Web Deve
 ### Requirements:  
 - [Python 2.7, 3.5](www.python.org) or latest version of Python programming language.
 - [VartualBox](www.vartualbox.org/wiki/Downloads) the software that runs the Virtual Machine (VM) environment locally in the Operating System (OS).
-- [Vagrant](www.vagrantup.com)the software that lunches and configures the virtual machine in your computer.
+- [Vagrant](www.vagrantup.com) the software that lunches and configures the virtual machine in your computer.
 - [Git](www.git-scm.com) a free and open source Unix-style terminal.
 
 ### How to get to the project: 
