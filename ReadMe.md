@@ -18,6 +18,7 @@ Downloading [VartualBox](https://www.virtualbox.org/) and [vagrant](https://www.
 - $ vagrant up
 - $ vagrant ssh
 - $ cd  /vagrant/catalog 
+- $ pip  install  -r  requirements.txt 
 - $ python database_setup.py
 - $ python lotofmenu.py
 - $ python application.py
