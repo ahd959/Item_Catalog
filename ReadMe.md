@@ -9,7 +9,7 @@ This project is the second project for those who enrolled in Full-Stack Web Deve
 - [Python 2.7, 3.5](www.python.org) or latest version of Python programming language.
 - [VartualBox](www.vartualbox.org/wiki/Downloads) the software that runs the Virtual Machine (VM) environment locally in the Operating System (OS).
 - [Vagrant](www.vagrantup.com) the software that lunches and configures the virtual machine in your computer.
-- [Git](www.git-scm.com) a free and open source Unix-style terminal.
+- [Git](www.git-scm.com) a free and open source Unix-style terminal. Clone or download the [Vagrant VM configuration file](https://github.com/udacity/fullstack-nanodegree-vm).
 
 ### How to get to the project: 
 Downloading [VartualBox](www.vartualbox.org/wiki/Downloads) and [vagrant](www.vagrantup.com) from their websites and set all the requirements for running the virtual machine. 
