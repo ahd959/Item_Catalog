@@ -24,3 +24,11 @@ Downloading [VartualBox](https://www.virtualbox.org/) and [vagrant](https://www.
 - $ python lotofmenu.py
 - $ python application.py
 - Then Accessing and testing the application by visiting http://localhost:8000 locally
+
+### JSON End Points: 
+- JSON API to show all car companies
+>http://localhost:8000/car/JSON
+- JSON API to show one car company and its all items
+>http://localhost:8000/car/1/menu/JSON
+- JSON API to show an item in a car company
+>http://localhost:8000/car/1/menu/1/JSON
