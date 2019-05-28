@@ -29,6 +29,8 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+logging.basicConfig(level=logging.DEBUG)
+
 
 # Login to the website
 @app.route('/login')
@@ -85,7 +87,7 @@ def gconnect():
         response = make_response(
             json.dumps("Token's client ID does not match app's."), 401)
         # print ("Token's client ID does not match app's.")
-        logging.error("Token's client ID does not match app's.")
+        logging.debug("Token's client ID does not match app's.")
         response.headers['Content-Type'] = 'application/json'
         return response
 
