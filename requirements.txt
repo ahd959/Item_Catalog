@@ -9,7 +9,7 @@ psycopg2-binary==2.7.7
 pylint==1.9.4      
 redis==3.2.1   
 requests==2.21.0  
-rsa==4.0     
+rsa==4.1     
 SecretStorage==2.3.1   
 setuptools==40.8.0  
 singledispatch==3.4.0.3 
